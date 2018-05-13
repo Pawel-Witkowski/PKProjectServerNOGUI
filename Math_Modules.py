@@ -11,7 +11,7 @@ def extended_euclid_gcd(a, b):
     r = b; old_r = a
 
     while r != 0:
-        quotient = old_r/r
+        quotient = old_r//r
         old_r, r = r, old_r - quotient*r
         old_s, s = s, old_s - quotient*s
         old_t, t = t, old_t - quotient*t
@@ -34,6 +34,6 @@ def fast_power(base, power, MOD):
     while power > 0:
         if power % 2 == 1:
             result = (result * base) % MOD
-        power = power / 2
+        power = power // 2
         base = (base * base) % MOD
     return result
